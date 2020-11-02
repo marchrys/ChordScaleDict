@@ -9,7 +9,17 @@ const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#f4511e',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
       <Stack.Screen name="Home" component={Home} options={{ title: 'Dictionnaire d\'accords et de gammes' }}/>
       <Stack.Screen name="ChordDict" component={ChordDict} options={{ title: 'Dictionnaire d\'accords' }}/>
       <Stack.Screen name="ScaleDict" component={ScaleDict} options={{ title: 'Dictionnaire de gammes' }}/>
