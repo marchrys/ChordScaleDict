@@ -1,13 +1,33 @@
-import React, { useState } from "react";
-import { View, Text } from "react-native";
+import React, { Component } from "react";
+import { View, Button } from "react-native";
 
-const Home = ({ navigation }) => {
+import styles from '../styles/styles';
 
-  return (
-    <View>
-      <Text>Test</Text>
-    </View>
-  );
-};
+class Home extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+
+    return (
+      <View style={styles.centeredScreen}>
+        <View style={styles.buttonView}>
+          <Button
+            title="Dictionnaire d'accords"
+            onPress={() => this.props.navigation.navigate("ChordDict")} // We added an onPress event which would navigate to the About screen
+          />
+        </View>
+        <View style={styles.buttonView}>
+          <Button
+            title="Dictionnaire de gammes"
+            onPress={() => this.props.navigation.navigate("ScaleDict")} // We added an onPress event which would navigate to the About screen
+          />
+        </View>
+      </View>
+    );
+
+  }
+}
 
 export default Home;
