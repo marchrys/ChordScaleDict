@@ -1,6 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
+import colors from '../styles/colors';
+
 import Home from "../screens/Home";
 import ChordDict from '../screens/ChordDict';
 import ScaleDict from '../screens/ScaleDict';
@@ -12,7 +14,7 @@ const MainStackNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#f4511e',
+          backgroundColor: colors.darkColor,
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
